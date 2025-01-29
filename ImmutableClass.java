@@ -11,7 +11,7 @@ public final class ImmutableClass {
     private final ArrayList<String> newlist;
 
     // constructor
-    public ImmutableClass(int value, List<String> list, List<String> newlist) {
+    public ImmutableClass(int value, List<String> list, ArrayList<String> newlist) {
         this.value = value;
         this.list = Collections.unmodifiableList(list);
         this.newlist = new ArrayList<>(newlist); // deep copy
