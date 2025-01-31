@@ -1,17 +1,31 @@
+package com.priya.strings;
+
 public class StringImmutability {
 
     public static void main(String[] args) {
-        String password = "password@123"; // create ref in string constant pool
-        System.out.println(password); // It will print password@123
 
-        System.out.println(password.hashCode());
+        //scnerio 2
+        String name1 = "jaya";
+        String name2 = "rekha";
+        String name3 = "jaya";
 
-        password = "changepassword"; // create new ref in string constant pool
-        System.out.println(password); // It will print changepassword ,
-        // But original "password@123" still in String Constant Pool
-        System.out.println(password.hashCode());
+        System.out.println(name1 +" hashcode= "+name1.hashCode());
+        System.out.println(name2 +" hashcode= "+name2.hashCode());
+        System.out.println(name3 +" hashcode= "+name3.hashCode());
 
+        String s3 = new String("Hello");
+        String s4 = new String("Hello");
+        String s5 = new String("Hello");
 
+        System.out.println(s4 +" hashcode= "+s4.hashCode());
+        System.out.println(s5 +" hashcode= "+s5.hashCode());
+        System.out.println(s4 == s3); // false (Different references)
+
+        System.out.println(s3 +" hashcode= "+s3.hashCode());
+        s3 = "bye";
+        System.out.println(s3 +" hashcode= "+s3.hashCode());
+        s3 = "Hello";
+        System.out.println(s3 +" hashcode= "+s3.hashCode());
 
     }
 }

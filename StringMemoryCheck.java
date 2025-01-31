@@ -1,3 +1,5 @@
+package com.priya.strings;
+
 public class StringMemoryCheck {
     public static void main(String[] args) {
         String s1 = "Java";  // String Pool
